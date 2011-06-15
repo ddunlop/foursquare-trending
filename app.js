@@ -1,12 +1,6 @@
 var foursquare = require('./lib/foursquare.js'),
-  mongo = require('./lib/mongo.js');
-
-var locations = {
-//  'Carrol Gardens': '40.6825,-73.9989',
-//  'Union Square': '40.735631,-73.990474',
-  'Santa Clara (Velocity)': '37.40469,-121.976191',
-  'Mission': '37.40469,-121.976191'
-};
+  mongo = require('./lib/mongo.js'),
+  locations = require('./config/locations');
 
 mongo.start(function() {
   function update(location, ll) {
